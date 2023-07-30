@@ -1,0 +1,46 @@
+@use 'styles/variables';
+
+$block: '.#{variables.$ns}menu';
+
+#{$block} {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    padding: 0;
+
+    background-color: #361e36;
+
+    list-style: none;
+
+    &__item {
+        width: 25%;
+        flex-shrink: 0;
+        padding-block: 30px;
+
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: #a398a7;
+
+        &_active {
+            position: relative;
+
+            color: #fff;
+
+            &::before {
+                content: '';
+
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                height: 5px;
+                width: 100%;
+
+                background-color: #44bc46;
+            }
+        }
+    }
+}

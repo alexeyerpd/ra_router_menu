@@ -1,0 +1,11 @@
+@use 'styles/variables';
+
+$block: '.#{variables.$ns}example';
+
+#{$block} {
+    padding: 40px;
+
+    background-color: #361e36;
+
+    color: #fff;
+}
